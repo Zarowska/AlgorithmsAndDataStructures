@@ -3,7 +3,6 @@
 #include <iostream>
 #include <time.h>
 
-
 using namespace std;
 
 const int n=10, N1=1, N2=8;
@@ -14,8 +13,6 @@ struct SPunkt
     int x;
     char y;
 };
-
-
 
 
 int main(int argc, char* argv[])
@@ -31,26 +28,7 @@ int main(int argc, char* argv[])
     for (int i=0; i<n; i++) {
     A[i].x = N1+rand()%(N2-N1+1); //rand()%(N2-N1) =  rand()%(8-1+1)= rand()%(8)={0 1 2 3 4 5 6 7};
     A[i].y = P1+rand()%(P2-P1+1);
-    // A[i].x =rand()%8+1; //rand()%8 ={0 1 2 3 4 5 6 7}; rand()%8+1 = {1 2 3 4 5 6 7 8}
-    //A[i].y =('a'+rand()%('h'-'a'+1));
-    //A[i].x = int(N1+(N2+1-N1)*rand( )/double(RAND_MAX));
-	//A[i].y = char(P1+(P2+1-P1)*rand( )/double(RAND_MAX));
-
-
-        };
-
-//dla testow
-//for(int i=0; i<n; i++) {
-//cout << A[i].x << "\t";
-//}
-//cout << 10%2 << endl;
-//cout << endl;
-//cout << endl;
-//for(int i=0; i<n; i++) {
-//cout << A[i].y << "\t";
-//}
-//cout << endl;
-//cout << endl;
+    
 
 cout << "Tablica A:" << "\n" ;
 //wydrukowanie tablicy B
@@ -65,11 +43,8 @@ for(int i=0; i<n; i++) {
 	if (A[i].x <=4) dolna++;
 	};
 
-//cout << "Rozmiar tablicy B: " << dolna << endl;
-//cout << "Rozmiar tablicy C: " << n-dolna << endl;
-//cout << endl;
 
-//deklaacja wskaźnika, rezerwacja miejsce w pamięci o typie SPunkt
+//deklaracja wskaźnika, rezerwacja miejsce w pamięci o typie SPunkt
 SPunkt * B = new SPunkt[dolna];
 SPunkt * C = new SPunkt[n-dolna];
 
