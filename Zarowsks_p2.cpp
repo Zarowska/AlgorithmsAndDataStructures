@@ -20,8 +20,8 @@ void WYPISZ(Elem *glowa, string naglowek  ){
 }
 
 int LICZBY(Elem *&glowa, int n){
-    int ilosc=0; //liczba dodanych elementów
-//1. Do listy jednokierunkowej zawieraj¹cej liczby ca³kowite i zaczynaj¹cej siê pod jakimœ adresem dodaje jak¹œ liczbê elementów zawieraj¹cych losowe liczby ca³kowite z przedzia³u <-100,100>,
+    int ilosc=0; //liczba dodanych elementÃ³w
+//1. Do listy jednokierunkowej zawierajÄ…cej liczby caÅ‚kowite i zaczynajÄ…cej siÄ™ pod jakimÅ› adresem dodaje jakÄ…Å› liczbÄ™ elementÃ³w zawierajÄ…cych losowe liczby caÅ‚kowite z przedziaÅ‚u <-100,100>,
     Elem* akt = NULL;
     Elem* ost = NULL;
 
@@ -48,7 +48,7 @@ int LICZBY(Elem *&glowa, int n){
     cout<<endl;
     WYPISZ(glowa, "Wynik kroku 1. Do listy dodano "+ss.str()+" element.");
 
-//2 Dodaje po ka¿dym elemencie zawieraj¹cym liczbê ujemn¹ element zawieraj¹cy tê liczbê pomniejszon¹ o 10.
+//2 Dodaje po kaÅ¼dym elemencie zawierajÄ…cym liczbÄ™ ujemnÄ… element zawierajÄ…cy tÄ™ liczbÄ™ pomniejszonÄ… o 10.
     akt=glowa;
     while(akt!=NULL){
         if (akt ->liczba <0) {
@@ -66,7 +66,7 @@ int LICZBY(Elem *&glowa, int n){
     cout<<endl;
     WYPISZ(glowa, "Wynik kroku 2. Dodano po kazdym elemencie zawierajacym liczbz ujemna element zawierajacy te liczbe pomniejszona o 10");
 
-//3. Dodaje jako przedostatni element liczbê -25, o ile to mo¿liwe.
+//3. Dodaje jako przedostatni element liczbÄ™ -25, o ile to moÅ¼liwe.
 	if ( glowa == NULL ) {
         cout << endl << "Wynik kroku 3. Brak mozliwosci dodania przedostatniego elementu. Lista pusta." << endl;
    }
@@ -93,7 +93,7 @@ int LICZBY(Elem *&glowa, int n){
     WYPISZ(glowa, "Wynik kroku 3. Dodano jako przedostatni element liczbe -25.");
     }
 
-//4. Przesuwa na pocz¹tek listy element zawieraj¹cy najwiêksz¹ liczbê (pierwszy z napotkanych, je¿eli jest kilka), o ile to mo¿liwe.
+//4. Przesuwa na poczÄ…tek listy element zawierajÄ…cy najwiÄ™kszÄ… liczbÄ™ (pierwszy z napotkanych, jeÅ¼eli jest kilka), o ile to moÅ¼liwe.
 
    if ( glowa == NULL ) {
         cout << endl <<"Wynik kroku 4. Przysuwanie nie zrealizowano. Lista pusta." << endl;
@@ -138,11 +138,11 @@ int LICZBY(Elem *&glowa, int n){
 
 int main() {
     srand(time(NULL));
- //a. Losuje liczbê ca³kowit¹ N z przedzia³u <0,5>
+ //a. Losuje liczbÄ™ caÅ‚kowitÄ… N z przedziaÅ‚u <0,5>
     int N = rand() % 6 ;
     cout << "Wylosowana liczba N="<< N << endl;
 
-//b. Tworzy listê jednokierunkow¹ zawieraj¹c¹ liczby ca³kowite i dodaje do niej N elementów zawieraj¹cych losowe liczby ca³kowite z przedzia³u <0,100>
+//b. Tworzy listÄ™ jednokierunkowÄ… zawierajÄ…cÄ… liczby caÅ‚kowite i dodaje do niej N elementÃ³w zawierajÄ…cych losowe liczby caÅ‚kowite z przedziaÅ‚u <0,100>
     Elem* glowa;
     glowa = NULL;
 
@@ -167,14 +167,14 @@ int main() {
     cout<<endl;
     WYPISZ(glowa, "Utworzona lista: ");
 
-//c. wywo³uje funkcjê LICZBY
+//c. wywoÅ‚uje funkcjÄ™ LICZBY
 	int liczba = LICZBY(glowa, 3);
 
-//d. drukuje informacjê o liczbie dodanych przez funkcjê elementów
+//d. drukuje informacjÄ™ o liczbie dodanych przez funkcjÄ™ elementÃ³w
     cout << endl << "Liczba dodanych przez funkcje elementow powna " << liczba << endl;
 
 
-//e. kasuje utworzon¹ listê.
+//e. kasuje utworzonÄ… listÄ™.
     Elem  *pom;
     while (glowa != NULL) {
         pom=glowa;
