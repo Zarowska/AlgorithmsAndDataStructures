@@ -10,7 +10,7 @@ struct STowar {
 	double  cena;
 	STowar *nast;
 };
-	//funkcja, która dopisuje towar o jakichś danych na początku listy zaczynającej się pod jakimś adresem
+//funkcja, która dopisuje towar o jakichś danych na początku listy zaczynającej się pod jakimś adresem
 void dopiszNaPoczatek(STowar *&glowa, string ntow, double ctow) {
 	STowar * p = new STowar;	//tworzymy nowy element
 	if (glowa != NULL) {
@@ -26,14 +26,14 @@ void dopiszNaPoczatek(STowar *&glowa, string ntow, double ctow) {
 		glowa->nast = NULL;
     };
 };
-	//funkcja drukująca listę zaczynając się pod jakimś adresem
+//funkcja drukująca listę zaczynając się pod jakimś adresem
 void pisz(STowar *element) {
 	while (element != NULL) {
 		cout << element->nazwa << ": " << round(element->cena*100)/100  << " zl" << endl;
 		element = element->nast;
 	}
 };
-	//funkcja kasująca listę zaczynającą się pod jakimś adresem
+//funkcja kasująca listę zaczynającą się pod jakimś adresem
 void usun_liste (STowar  *&glowa) {
 	STowar  *pom;
 	while (glowa != NULL) {
